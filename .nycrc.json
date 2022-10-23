@@ -1,0 +1,12 @@
+{
+  "all": true,
+  "extension": [
+    ".test.js"
+  ],
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "tests"
+  ]
+}

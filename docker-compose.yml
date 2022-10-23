@@ -1,0 +1,8 @@
+ database:
+    image: mysql:8.0.29
+    container_name: infogames_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: InfoGames
+    ports:
+      - "3306:3306"

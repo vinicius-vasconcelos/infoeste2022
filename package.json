@@ -1,0 +1,47 @@
+{
+  "name": "infoeste2022",
+  "version": "1.0.0",
+  "description": "Repositório criado para ministrar aulas no curso de Introdução a APIs REST com Node.js e ferramentas de testes automatizados na Infoeste 2022",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "npm run test:unit && npm run test:integration --exit",
+    "test:unit": "mocha ./tests/unit/**/*.test.js --exit",
+    "test:integration": "mocha ./tests/integration/**/*.test.js --exit",
+    "cover": "nyc npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinicius-vasconcelos/infoeste2022.git"
+  },
+  "keywords": [
+    "node",
+    "node.js",
+    "express.js",
+    "mocha",
+    "chai",
+    "sinon",
+    "mysql",
+    "mysql2"
+  ],
+  "author": "Vinicius-Vasconcelos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vinicius-vasconcelos/infoeste2022/issues"
+  },
+  "homepage": "https://github.com/vinicius-vasconcelos/infoeste2022#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^2.3.3"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
+    "dotenv": "^16.0.3",
+    "mocha": "^10.1.0",
+    "nodemon": "^2.0.20",
+    "nyc": "^15.1.0",
+    "sinon": "^14.0.1"
+  }
+}
