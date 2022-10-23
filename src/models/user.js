@@ -23,8 +23,21 @@ const getById = async (id) => {
   return user;
 };
 
+const update = async (id, userObj) => {
+  const { fullName, nickname } = userObj;
+  const query = 'UPDATE InfoGames.users SET usr_full_name = ?, usr_nickname = ? WHERE usr_id = ?;';
+  return conn.execute(query, [fullName, nickname, id]);
+}
+
+const drop = async (id) => {
+  const query = 'DELETE FROM InfoGames.users WHERE usr_id = ?;';
+  return conn.execute(query, [id]);
+}
+
 module.exports = {
   create,
   getAll,
   getById,
+  update,
+  drop,
 };

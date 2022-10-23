@@ -6,6 +6,13 @@ const userValidation = (req, res, next) => {
   next();
 }
 
+const gameValidation = (req, res, next) => {
+  const { name } = req.body;
+  if (!name) return res.status(400).json({ message: 'Name é um campo obrigatório' });
+  next();
+}
+
 module.exports = {
   userValidation,
+  gameValidation
 };

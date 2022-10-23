@@ -15,5 +15,14 @@ route.get(
   '/:id',
   userCtr.getById,
 );
+route.put(
+  '/:id',
+  userValidation,
+  userCtr.update,
+);
+route.delete(
+  '/:id',
+  userCtr.drop,
+);
 
 module.exports = route;
