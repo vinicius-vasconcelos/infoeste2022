@@ -6,10 +6,8 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "test": "npm run test:unit && npm run test:integration --exit",
-    "test:unit": "mocha ./tests/unit/**/*.test.js --exit",
-    "test:integration": "mocha ./tests/integration/**/*.test.js --exit",
-    "cover": "nyc npm test"
+    "test": "mocha ./tests/**/*.test.js"
+
   },
   "repository": {
     "type": "git",
